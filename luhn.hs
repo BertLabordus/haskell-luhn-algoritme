@@ -50,6 +50,3 @@ luhn xs = sumArray( modArray( multiplySecond xs ) ) `mod` 10 == 0
 -- Calculate checkdigit of creditcardnumber
 luhnCheckDigit :: Integral a => [a] -> a
 luhnCheckDigit xs = 10 - sumArray( modArray( multiplySecond xs ++ [0]) ) `mod` 10
-
-
-main = print(luhnCheckDigit[7,9,9,2,7,3,9,8,7,1])
